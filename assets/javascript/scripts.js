@@ -35,8 +35,9 @@ var secondsLeft = 30;
 
 function setTime() {
     var timerInterval = setInterval(function() {
+      console.log("timer started")
       secondsLeft--;
-      timer.textContent = "Time remaining:" + secondsLeft + "seconds";
+      timer.textContent = "Time remaining: " + secondsLeft + " seconds";
   
       if(secondsLeft === 0) {
         clearInterval(timerInterval);
@@ -48,6 +49,7 @@ function setTime() {
   
 
 button.addEventListener("click", function(){
+    setTime();
 
     for (var i = 0; i < questionSet.length; i++) {
 console.log (questionSet.length);
