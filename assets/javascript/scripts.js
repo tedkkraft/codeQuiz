@@ -27,15 +27,16 @@ var questionSet = [{
 }];
 
 
-var button = document.querySelector("#button");
+var start = document.querySelector("#start");
 var quizQuestion = document.querySelector("#question");
 var quizAnswers = document.querySelector("#answers");
 var timer = document.querySelector("#timer");
-var secondsLeft = 30;
+var secondsLeft = 60;
 
+
+// ----- TIMER ----- //
 function setTime() {
     var timerInterval = setInterval(function() {
-      console.log("timer started")
       secondsLeft--;
       timer.textContent = "Time remaining: " + secondsLeft + " seconds";
   
@@ -43,15 +44,46 @@ function setTime() {
         clearInterval(timerInterval);
         alert("Out of time!");
       }
-  
     }, 1000);
   }
   
+// ----- ON CLICK EVENTS ----- //
 
-button.addEventListener("click", function(){
+// WHEN start button is clicked...
+// ...start the timer
+start.addEventListener("click", function(){
     setTime();
 
+    //...serve questions in order to #question div, and answers to answers div.
     for (var i = 0; i < questionSet.length; i++) {
-console.log (questionSet.length);
-    }
+        quizQuestion.text(questionSet[i].question)
+        quizAnswers.innerHTML("<ul>" + <li></li>) //pondering over how to serve up a set of answers vs just one question...
+
+    // ...hide the start button
+
+
+    //WHEN an answer is selected..
+
+        //...check whether the chosen answer is correct or incorrect.
+
+        //...store whether the answer is correct or inncorrect.
+
+        //...alert the user whether the answer is correct or incorrect (IF incorrect, subract 5 seconds from secondsLeft)
+
+        //...serve up the next question and answer set.
+
+
+     //IF there are no questions left to serve up OR IF secondsLeft = 0...
+
+        //Hide all elements in #subContainer
+
+        //Display total score/number of correct answers
+
+        //Display High Scores...store score on High Scores
+
+        //Display "Try Again" button
+
+
+
+ }
 })

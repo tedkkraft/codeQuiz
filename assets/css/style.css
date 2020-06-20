@@ -1,9 +1,7 @@
-/* Can't figure out why the border isn't showing up on the .container*/
+/* Can't figure out why the border isn't showing up on the .container. Ended up removing it.*/
 .container {
     width: 40%;
     height: 40%;
-    border: 10px, solid, green;
-    border-color: #33cc33;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,3 +14,6 @@ h1 {
     font-weight: bold;
 
 }
+
+/* ADD SHOW AND HIDE CLASS STYLES
+
