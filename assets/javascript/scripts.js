@@ -1,4 +1,4 @@
-var questions = [{
+var questionSet = [{
     question: "A JavaScript string is zero or more characters written inside...",
     answers: ["Brackets", "Parentheses", "Quotes", "Semicolons"],
     correctAnswer: "Quotes"
@@ -24,5 +24,32 @@ var questions = [{
     correctAnswer: "Curly brackets"
 }, {
 
-
 }];
+
+
+var button = document.querySelector("#button");
+var quizQuestion = document.querySelector("#question");
+var quizAnswers = document.querySelector("#answers");
+var timer = document.querySelector("#timer");
+var secondsLeft = 30;
+
+function setTime() {
+    var timerInterval = setInterval(function() {
+      secondsLeft--;
+      timer.textContent = "Time remaining:" + secondsLeft + "seconds";
+  
+      if(secondsLeft === 0) {
+        clearInterval(timerInterval);
+        alert("Out of time!");
+      }
+  
+    }, 1000);
+  }
+  
+
+button.addEventListener("click", function(){
+
+    for (var i = 0; i < questionSet.length; i++) {
+console.log (questionSet.length);
+    }
+})
